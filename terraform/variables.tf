@@ -9,3 +9,15 @@ variable "environment" {
   type        = string
   default     = "dev"
 }
+
+variable "project_name" {
+  description = "Project name used for resource naming"
+  type        = string
+  default     = "eks-gitops-platform"
+}
+
+variable "cluster_name" {
+  description = "EKS cluster name"
+  type        = string
+  default     = "eks-gitops-dev"
+}

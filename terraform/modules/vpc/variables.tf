@@ -1,15 +1,10 @@
 variable "project_name" {
-  description = "Project name"
+  description = "Project name used for resource naming"
   type        = string
 }
 
 variable "environment" {
-  description = "Environment name"
-  type        = string
-}
-
-variable "cluster_name" {
-  description = "EKS cluster name"
+  description = "Deployment environment"
   type        = string
 }
 
@@ -19,16 +14,21 @@ variable "vpc_cidr" {
 }
 
 variable "public_subnet_cidrs" {
-  description = "Public subnet CIDRs"
+  description = "CIDR blocks for public subnets"
   type        = list(string)
 }
 
 variable "private_subnet_cidrs" {
-  description = "Private subnet CIDRs"
+  description = "CIDR blocks for private subnets"
   type        = list(string)
 }
 
 variable "availability_zones" {
-  description = "Availability zones"
+  description = "Availability zones to use"
   type        = list(string)
+}
+
+variable "cluster_name" {
+  description = "EKS cluster name used for subnet tagging"
+  type        = string
 }
