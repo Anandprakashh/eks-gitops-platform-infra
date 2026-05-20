@@ -1,6 +1,7 @@
 project_name = "eks-gitops-platform"
 environment  = "dev"
 cluster_name = "eks-gitops-dev"
+repository_name = "fastapi-app"
 
 vpc_cidr = "10.0.0.0/16"
 

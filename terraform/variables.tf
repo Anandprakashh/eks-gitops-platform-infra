@@ -21,3 +21,9 @@ variable "cluster_name" {
   type        = string
   default     = "eks-gitops-dev"
 }
+
+variable "repository_name" {
+  description = "Name of the application ECR repository"
+  type        = string
+  default     = "fastapi-app"
+}
