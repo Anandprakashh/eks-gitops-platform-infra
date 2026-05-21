@@ -1,5 +1,5 @@
 variable "project_name" {
-  description = "Project name"
+  description = "Project name used for naming"
   type        = string
 }
 
@@ -13,34 +13,14 @@ variable "cluster_name" {
   type        = string
 }
 
-variable "vpc_cidr" {
-  description = "CIDR block for the VPC"
-  type        = string
-}
-
-variable "public_subnet_cidrs" {
-  description = "Public subnet CIDRs"
-  type        = list(string)
-}
-
-variable "private_subnet_cidrs" {
-  description = "Private subnet CIDRs"
-  type        = list(string)
-}
-
-variable "availability_zones" {
-  description = "Availability zones"
-  type        = list(string)
-}
-
-variable "repository_name" {
-  description = "Name of the ECR repository"
-  type        = string
-}
-
 variable "cluster_version" {
   description = "Kubernetes version for EKS"
   type        = string
+}
+
+variable "subnet_ids" {
+  description = "Subnet IDs for the EKS cluster and node group"
+  type        = list(string)
 }
 
 variable "node_group_name" {
@@ -49,7 +29,7 @@ variable "node_group_name" {
 }
 
 variable "node_instance_types" {
-  description = "EC2 instance types for the node group"
+  description = "Instance types for the node group"
   type        = list(string)
 }
 
@@ -69,6 +49,7 @@ variable "max_size" {
 }
 
 variable "capacity_type" {
-  description = "Capacity type for the node group"
+  description = "Capacity type for nodes"
   type        = string
+  default     = "ON_DEMAND"
 }
