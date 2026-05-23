@@ -276,4 +276,4 @@ This repository is part of a hands-on DevOps and platform engineering portfolio 
 - cloud-native ingress and load balancer management;
 - practical cloud architecture and operational workflows.
 
-It is being built as a real project, with build, validate, expose, and destroy steps documented clearly for interview and portfolio use.
+It is being built as a real project, with build, validate, expose, and destroy steps documented clearly for portfolio use.
